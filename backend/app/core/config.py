@@ -11,8 +11,18 @@ class Settings(BaseModel):
     API_V1_STR: str = "/api"
     
     # Database
-    DATABASE_URL: str = os.getenv("DATABASE_URL", "sqlite:///./nilam_pesum.db")
-    
+   _raw_database_url = os.getenv("DATABASE_URL", "sqlite:///./nilam_pesum.db")
+
+if _raw_database_url.startswith("postgres://"):
+    _raw_database_url = _raw_database_url.replace(
+        "postgres://", "postgresql+psycopg://", 1
+    )
+elif _raw_database_url.startswith("postgresql://"):
+    _raw_database_url = _raw_database_url.replace(
+        "postgresql://", "postgresql+psycopg://", 1
+    )
+
+DATABASE_URL: str = _raw_database_url
     # Security
     SECRET_KEY: str = os.getenv("SECRET_KEY", "nilam_pesum_super_secret_jwt_key_2026_dev")
     ALGORITHM: str = "HS256"
