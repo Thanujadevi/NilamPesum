@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="forestGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2f6a46" />
+      <stop offset="100%" stop-color="#193926" />
+    </linearGradient>
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7bc863" />
+      <stop offset="100%" stop-color="#3e8459" />
+    </linearGradient>
+    <linearGradient id="earthGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c19f7b" />
+      <stop offset="100%" stop-color="#7d523c" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Outer Shield / Circle Background -->
+  <circle cx="60" cy="60" r="56" fill="url(#forestGrad)" stroke="#7bc863" stroke-width="2.5" />
+  
+  <!-- Farmland Furrows / Contour Lines (Earth Brown & Cream) -->
+  <path d="M 22 84 Q 60 70 98 84 L 95 94 Q 60 82 25 94 Z" fill="url(#earthGrad)" opacity="0.9" />
+  <path d="M 30 76 Q 60 64 90 76" stroke="#f7f5f0" stroke-width="2" fill="none" stroke-linecap="round" stroke-dasharray="4 3" />
+  <path d="M 38 68 Q 60 58 82 68" stroke="#f7f5f0" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.75" />
+
+  <!-- Flourishing Green Leaf (Center) -->
+  <path d="M 60 40 C 45 42 40 58 48 72 C 54 62 60 55 70 50 C 65 44 63 41 60 40 Z" fill="url(#leafGrad)" />
+  <path d="M 60 40 C 75 42 80 58 72 72 C 66 62 60 55 50 50 C 55 44 57 41 60 40 Z" fill="#91c3a1" opacity="0.9" />
+  <path d="M 60 40 L 60 72" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" />
+
+  <!-- NASA Satellite & Orbit Signal (Top) -->
+  <ellipse cx="60" cy="28" rx="35" ry="12" fill="none" stroke="#7bc863" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.8" transform="rotate(-15 60 28)" />
+  <g transform="translate(76, 20) rotate(-15) scale(0.65)">
+    <!-- Satellite Body -->
+    <rect x="-8" y="-6" width="16" height="12" rx="2" fill="#f7f5f0" stroke="#193926" stroke-width="1.5" />
+    <!-- Solar Panels -->
+    <rect x="-24" y="-4" width="14" height="8" rx="1" fill="#38bdf8" stroke="#0284c7" stroke-width="1" />
+    <rect x="10" y="-4" width="14" height="8" rx="1" fill="#38bdf8" stroke="#0284c7" stroke-width="1" />
+    <!-- Sensor Beam -->
+    <circle cx="0" cy="0" r="2.5" fill="#f59e0b" />
+    <line x1="0" y1="6" x2="-8" y2="28" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="2 2" opacity="0.9" />
+    <line x1="0" y1="6" x2="4" y2="28" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="2 2" opacity="0.9" />
+  </g>
+</svg>
+
